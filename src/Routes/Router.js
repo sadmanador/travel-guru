@@ -5,6 +5,8 @@ import Main from "../Layouts/Main";
 import Profile from "../Layouts/Profile";
 import Calender from "../Pages/Booking/Calender";
 import Location from "../Pages/Booking/Location";
+import HotelMap from "../Pages/Hotels_option/HotelMap";
+import Option from "../Pages/Hotels_option/Option";
 import Login from "../Pages/manage_user/Login/Login";
 import Register from "../Pages/manage_user/Register/Register";
 
@@ -28,22 +30,28 @@ export const router = createBrowserRouter([
         ],
       },
       {
-        path: '/',
+        path: "/profile",
         element: <Profile></Profile>,
         children: [
           {
-            path: "/login",
+            path: "/profile",
             element: <Login></Login>,
           },
           {
-            path: "/register",
+            path: "/profile/register",
             element: <Register></Register>,
           },
-        ]
+        ],
       },
       {
         path: "/hotels",
         element: <Hotels></Hotels>,
+        children: [
+          {
+            path: "/hotels",
+            element: <HotelMap></HotelMap>,
+          },
+        ],
       },
     ],
   },

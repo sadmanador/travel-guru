@@ -4,7 +4,7 @@ const Navbar = () => {
   return (
     <div className="navbar bg-base-100">
       <div className="flex-1">
-        <a className="btn btn-ghost normal-case text-xl" href="/">daisyUI</a>
+        <a className="btn btn-ghost normal-case text-xl" href="/">Travel Guru</a>
       </div>
       <div className="flex-none">
         <ul className="menu menu-horizontal px-1">
@@ -83,7 +83,7 @@ const Navbar = () => {
             className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
           >
             <li>
-              <a className="justify-between">
+              <a className="justify-between" href="/profile">
                 Profile
                 <span className="badge">New</span>
               </a>

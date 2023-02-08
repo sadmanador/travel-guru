@@ -4,7 +4,7 @@ import Option from '../../Pages/Hotels_option/Option';
 
 const Hotels = () => {
     return (
-        <div>
+        <div className='grid grid-cols-2'>
             <Option></Option>
             <Outlet></Outlet>
         </div>
