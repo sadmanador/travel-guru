@@ -1,9 +1,10 @@
 import { createBrowserRouter } from "react-router-dom";
+import Home from "../Layouts/Home/Home";
 import Hotels from "../Layouts/Hotels/Hotels";
 import Main from "../Layouts/Main";
-import Booking from "../Pages/Booking/Booking";
-import Home from "../Pages/Home/Home";
-import HotelMap from "../Pages/Hotels_option/Hotel_map";
+import Profile from "../Layouts/Profile";
+import Calender from "../Pages/Booking/Calender";
+import Location from "../Pages/Booking/Location";
 import Login from "../Pages/manage_user/Login/Login";
 import Register from "../Pages/manage_user/Register/Register";
 
@@ -17,27 +18,33 @@ export const router = createBrowserRouter([
         element: <Home></Home>,
         children: [
           {
-            path: "/booking",
-            element: <Booking></Booking>,
+            path: "/",
+            element: <Location></Location>,
           },
           {
-            path: "/booking_calender",
-            element: <Booking></Booking>,
+            path: "/calender",
+            element: <Calender></Calender>,
           },
         ],
       },
       {
-        path: "/login",
-        element: <Login></Login>,
+        path: '/',
+        element: <Profile></Profile>,
+        children: [
+          {
+            path: "/login",
+            element: <Login></Login>,
+          },
+          {
+            path: "/register",
+            element: <Register></Register>,
+          },
+        ]
       },
       {
-        path: '/register',
-        element: <Register></Register>
-      },
-      {
-        path: '/hotels',
+        path: "/hotels",
         element: <Hotels></Hotels>,
-      }
+      },
     ],
   },
 ]);
