@@ -37,12 +37,6 @@ export const router = createBrowserRouter([
       {
         path: '/hotels',
         element: <Hotels></Hotels>,
-        children: [
-            {
-                path: '/hotel_option',
-                element: <HotelMap></HotelMap>
-            }
-        ]
       }
     ],
   },
