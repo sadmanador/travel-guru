@@ -1,14 +1,14 @@
 import React from 'react';
 import { Outlet } from 'react-router-dom';
-import Navbar from '../Pages/Shared/Navbar/Navbar';
+import Option from '../../Pages/Hotels_option/Option';
 
-const Main = () => {
+const Hotels = () => {
     return (
         <div>
-            <Navbar></Navbar>
+            <Option></Option>
             <Outlet></Outlet>
         </div>
     );
 };
 
-export default Main;
+export default Hotels;
