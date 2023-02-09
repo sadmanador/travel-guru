@@ -1,6 +1,6 @@
 import React from 'react';
 import { Outlet } from 'react-router-dom';
-import Option from '../../Pages/Hotels_option/Option';
+import Option from '../../Pages/Hotels_option/HotelMap'
 
 const Hotels = () => {
     return (

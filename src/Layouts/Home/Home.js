@@ -4,8 +4,7 @@ import Booking from '../../Pages/Booking/Booking';
 
 const Home = () => {
     return (
-        <div className='grid grid-cols-2 gap-4'>
-           <Booking></Booking>
+        <div className=''>
            <Outlet></Outlet>
         </div>
     );

@@ -1,22 +1,26 @@
 import React from "react";
+import { FaLongArrowAltRight } from "react-icons/fa";
+import { useLoaderData } from "react-router-dom";
+import { coolGray } from "tailwindcss/colors";
 
 const Location = () => {
+  const destinations = useLoaderData();
+  const {body, img_url, id, location} = destinations;
+  console.log(destinations);
+
   return (
-    <div>
-      <h1>Location</h1>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed
-        perspiciatis quibusdam doloremque autem! Sint perspiciatis perferendis
-        aspernatur iure placeat harum eligendi illum ipsa autem excepturi,
-        quidem consequatur obcaecati pariatur, odio quam provident aut dolorum
-        nemo reiciendis reprehenderit deleniti nesciunt. Blanditiis nostrum
-        architecto, quae et modi in exercitationem magnam vero molestiae quaerat
-        ut, at labore veritatis aliquid minus, nisi consectetur cupiditate
-        veniam culpa voluptas ad ex laborum nemo ab? Rem alias libero ut ipsa
-        laudantium saepe mollitia quaerat dolorem ad ab. Repudiandae quo cumque
-        error hic dolores, accusantium nulla eaque, debitis excepturi corporis
-        cupiditate quibusdam fugit corrupti sed itaque voluptatem doloremque?
-      </p>
+    <div className="grid grid-cols-2 gap-4">
+      <div>
+        <h1 className="text-5xl font-semibold">Location</h1>
+        <p className="text-xl mt-4">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores
+          recusandae quo eum eos ut est nesciunt deserunt enim! Eum, corporis.
+        </p>
+        <button className="bg-orange-400 text-black font-semibold text-2xl rounded py-3 px-4 mt-4">
+          Booking <FaLongArrowAltRight className="inline"></FaLongArrowAltRight>
+        </button>
+      </div>
+      <div></div>
     </div>
   );
 };
