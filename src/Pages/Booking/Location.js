@@ -1,12 +1,10 @@
 import React from "react";
 import { FaLongArrowAltRight } from "react-icons/fa";
 import { useLoaderData } from "react-router-dom";
-import { coolGray } from "tailwindcss/colors";
+import DestinationCard from "./DestinationCard";
 
 const Location = () => {
   const destinations = useLoaderData();
-  const {body, img_url, id, location} = destinations;
-  console.log(destinations);
 
   return (
     <div className="grid grid-cols-2 gap-4">
@@ -20,7 +18,11 @@ const Location = () => {
           Booking <FaLongArrowAltRight className="inline"></FaLongArrowAltRight>
         </button>
       </div>
-      <div></div>
+      <div>
+        {
+          destinations.map(des => <DestinationCard key={destinations.location} destinations={destinations}></DestinationCard>)
+        }
+      </div>
     </div>
   );
 };
